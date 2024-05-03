@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Home Page -->
+  <div class="quiz_app active">
+    <div class="home" id="homeContainer">
+      <div class="UserSection">
+        <center>
+          <img src="logo.png" alt="Testbook Logo"></img>
+          <h1 id="user_name">Hello User!</h1>
+          <h3>Enter your name to continue the Quiz.</h3>
+          <input type="text" name="username" id="username" placeholder="Enter Your Name" required />
+          <!-- <button id="display-btn">Enter</button> -->
+          <input type="submit" id="display-btn" class="button">
+          <div id="errorMsg"></div>
+          <p>You'll have 10 seconds to answer each question</p>
+        </center>
+      </div>
+      <hr />
+      <center>
+        <h1>Select Category</h1>
+      </center>
+      <div class="categoryContainer" id="categoryContainer">
+        <button onclick="selectCategory('pipes')" class="section-btn">Pipes And Cisterns</button>
+        <button onclick="selectCategory('probability')" class="section-btn">&emsp;Probability&emsp;</button>
+        <button onclick="selectCategory('ages')" class="section-btn">Problems On Ages</button>
+        <button onclick="selectCategory('profits')" class="section-btn">Profit And Loss</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Quiz Page-->
+  <div id="display_container" class="display_container" style="display: none">
+    <div class="header">
+      <div class="title">
+        <center id="title"></center>
+      </div>
+      <span class="timer-div">
+        <span class="time_left">100</span>
+      </span>
+      <span class="user_score">SCORE:0</span>
+
+    </div>
+
+    <div class="question_box">
+      <center>
+        <div class="number_of_count">
+          <span class="number_of_question">
+            1/10
+          </span>
+        </div>
+      </center>
+      <div id="container">
+        <!-- QUESTIONS AND OPTIONS ARE DISPLAYED HERE -->
+      </div>
+    </div>
+
+    <center>
+      <button id="next_button">Next Question</button>
+    </center>
+  </div>
+
+
+
+
+
+
+
+
+  <!--Results Page-->
+  <div id="resultContainer" class="resultContainer" style="display: none">
+    <h1>Quiz Result</h1>
+
+    <p><span id="name"></span><strong>&nbsp;your result is:</strong></p>
+
+    <p>
+      <strong>Total Time Taken:</strong>
+      <span id="totalTimeTaken"></span> seconds
+    </p>
+
+    <p>
+      <strong>Total Questions:</strong> <span id="totalQuestions"></span>
+    </p>
+    <p>
+      <strong>Attempted:</strong>
+      <span id="attempted"></span>
+    </p>
+    <p>
+      <strong>Correct:</strong> <span id="correctAnswers"></span>
+    </p>
+    <p>
+      <strong>Wrong:</strong>
+      <span id="wrongAnswers"></span>
+    </p>
+
+    <p>
+      <strong>Percentage:</strong> <span id="percentage"></span>%
+    </p>
+    <div>
+
+      <button class="returnHome" onclick="returnHome()">Go back to Home</button>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
